@@ -1149,7 +1149,7 @@ a {
     }
 
     .hero h1 {
-        font-size: clamp(76px, 17vw, 125px);
+        font-size: clamp(56px, 10vw, 125px);
     }
 
     .hero-subtitle {
