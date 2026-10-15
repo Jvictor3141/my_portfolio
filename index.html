@@ -3,387 +3,316 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Meu Portfólio</title>
+        <meta name="theme-color" content="#f1eee5" />
+        <meta
+            name="description"
+            content="Portfólio de João Victor, estudante de Ciência da Computação e desenvolvedor em formação."
+        />
+        <title>João Victor — Portfólio</title>
         <link rel="stylesheet" href="main.css" />
+        <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            rel="shortcut icon"
-            href="./img/favicon.ico"
-            type="image/x-icon"
-        />
-        <!-- Font Awesome para ícones -->
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <!-- Google Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
             rel="stylesheet"
         />
     </head>
     <body>
-        <div class="background-blobs">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-            <div class="blob blob-3"></div>
-        </div>
+        <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-        <nav class="navbar glass">
-            <div class="logo">Dev<span>Portfolio</span></div>
-            <ul class="nav-links">
-                <li class="nav-item" data-tab-button>
-                    <a href="#home">Home</a>
-                </li>
-                <li class="nav-item" data-tab-button>
-                    <a href="#sobre">Sobre</a>
-                </li>
-                <li class="nav-item" data-tab-button>
-                    <a href="#habilidades">Habilidades</a>
-                </li>
-                <li class="nav-item" data-tab-button>
-                    <a href="#projetos">Projetos</a>
-                </li>
-                <li class="nav-item" data-tab-button>
-                    <a href="#contato">Contato</a>
-                </li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
+        <header class="site-header">
+            <a class="wordmark" href="#inicio" aria-label="João Victor, início">
+                <span class="wordmark-mark">JV</span>
+                <span class="wordmark-name">João Victor<br /><small>Portfólio · 2026</small></span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="mobile-menu"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="site-navigation"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-navigation" aria-label="Navegação principal">
+                <a href="#sobre">Sobre</a>
+                <a href="#formacao">Formação</a>
+                <a href="#projetos">Projetos</a>
+                <a class="nav-contact" href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a>
+            </nav>
+        </header>
+
+        <main id="conteudo">
+            <section class="hero" id="inicio" aria-labelledby="hero-title">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow"><span class="eyebrow-mark"></span> Desenvolvimento de software · Em formação</p>
+                    <h1 id="hero-title">Código<span class="punctuation">.</span></h1>
+                    <p class="hero-subtitle">com propósito<span class="punctuation">.</span></p>
+                    <p class="hero-description">
+                        Soluções com estrutura. Sou João Victor, estudante de Ciência da Computação. Trago a precisão da indústria para criar experiências digitais claras, úteis e bem construídas.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="text-link" href="#projetos">Explorar projetos <span aria-hidden="true">↓</span></a>
+                        <span class="hero-location">PORTFÓLIO PESSOAL <span>—</span> 2026</span>
+                    </div>
+                </div>
+
+                <figure class="hero-portrait reveal">
+                    <div class="portrait-frame">
+                        <img src="./img/profile.png" alt="Retrato em preto e branco de João Victor" />
+                        <span class="portrait-index" aria-hidden="true">01</span>
+                        <span class="portrait-caption">PROCESSO, PRECISÃO<br />E CURIOSIDADE.</span>
+                    </div>
+                </figure>
+
+                <div class="hero-side-note" aria-hidden="true">TECNOLOGIA COM OLHAR HUMANO</div>
+            </section>
+
+            <div class="ticker" aria-label="Do setor industrial ao desenvolvimento de software">
+                <div class="ticker-inner">
+                    <span>INDÚSTRIA</span><span class="ticker-arrow">→</span><span>TECNOLOGIA</span><span class="ticker-dot" aria-hidden="true">+</span>
+                    <span>DISCIPLINA</span><span class="ticker-arrow">→</span><span>DESENVOLVIMENTO</span><span class="ticker-dot" aria-hidden="true">+</span>
+                    <span>INDÚSTRIA</span><span class="ticker-arrow">→</span><span>TECNOLOGIA</span>
+                </div>
             </div>
-        </nav>
 
-        <main>
-            <section id="home" class="hero">
-                <div class="hero-content">
-                    <h1 class="reveal">
-                        Olá, eu sou
-                        <span class="gradient-text">João Victor</span>
-                    </h1>
-                    <span class="reveal">Código com propósito. Soluções com estrutura.</span>
-                    <p class="reveal">
-                        Estudante de Ciência da Computação, explorando o desenvolvimento de software por meio de projetos, lógica de programação e boas práticas de código.
-                    </p>
-                    <div class="hero-btns reveal">
-                        <a href="#projetos" class="btn btn-primary"
-                            >Ver Projetos</a
-                        >
-                        <a href="#contato" class="btn btn-secondary">Contato</a>
-                    </div>
-                </div>
-                <svg
-                    class="hero-image reveal"
-                    viewBox="0 0 200 200"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <defs>
-                        <clipPath id="blobClip">
-                            <path
-                                d="M39,-61C50.4,-53.4,59.2,-42.3,64.8,-29.7C70.3,-17.1,72.5,-3.2,70.2,9.8C67.9,22.9,61.2,35,52.9,47.5C44.6,60,34.9,72.8,21.8,78.6C8.8,84.5,-7.7,83.2,-23.9,79.3C-40.1,75.5,-56.1,69,-67.4,57.5C-78.6,46.1,-84.9,29.6,-87.2,12.7C-89.4,-4.3,-87.5,-21.7,-79,-34.4C-70.6,-47.1,-55.6,-55.1,-41.3,-61.3C-27,-67.6,-13.5,-72,0.2,-72.3C13.8,-72.5,27.7,-68.6,39,-61Z"
-                                transform="translate(100 100)"
-                            />
-                        </clipPath>
-                    </defs>
-                    <image
-                        href="./img/profile.png"
-                        width="200"
-                        height="200"
-                        clip-path="url(#blobClip)"
-                        preserveAspectRatio="xMidYMid slice"
-                    />
-                </svg>
-            </section>
-
-            <section id="sobre" class="section">
-                <h2 class="section-title reveal">Sobre Mim</h2>
-                <div class="about-container glass reveal">
-                    <p>
-                        Sou estudante de Ciência da Computação e desenvolvedor em formação, em transição da área industrial para a tecnologia. Minha experiência na indústria siderúrgica me proporcionou disciplina, responsabilidade, atenção aos detalhes e capacidade de tomar decisões em ambientes que exigem precisão e controle.
-                    </p>
-
-                    <p>
-                        Atualmente, direciono meus estudos para o desenvolvimento de software, com foco em tecnologias como JavaScript, TypeScript, React, Tailwind CSS, Java, Groovy e PostgreSQL. Busco consolidar meus conhecimentos por meio de projetos práticos, explorando desde a construção de interfaces até a lógica de negócio e a integração com bancos de dados.
-                    </p>
-
-                    <p>
-                        Vejo minha mudança de carreira como uma oportunidade de aplicar a experiência que construí na indústria a novos desafios. Meu objetivo é continuar evoluindo como desenvolvedor, aprender com outros profissionais e contribuir para a criação de soluções eficientes, funcionais e bem estruturadas.
-                    </p>
-                </div>
-            </section>
-
-            <section id="habilidades" class="section">
-                <h2 class="section-title reveal">Certificados & Habilidades</h2>
-                <div class="skills-grid">
-                    <div class="skill-card glass reveal">
-                        <i class="fa-solid fa-computer"></i>
-                        <h3>Informática Básica e Avançada - 2016</h3>
+            <section class="about section-shell" id="sobre" aria-labelledby="about-title">
+                <div class="section-rail reveal"><span>01 / SOBRE</span><span class="rail-line"></span></div>
+                <div class="about-content reveal">
+                    <p class="eyebrow">Uma trajetória em construção</p>
+                    <h2 id="about-title">De processos industriais<br />a <em>linhas de código.</em></h2>
+                    <div class="about-columns">
                         <p>
-                            Conhecimentos em ferramentas de escritório, sistemas
-                            operacionais e internet.
+                            Sou estudante de Ciência da Computação e desenvolvedor em formação, em transição da área industrial para a tecnologia. Minha experiência na indústria siderúrgica me trouxe disciplina, responsabilidade, atenção aos detalhes e tomada de decisão em ambientes que exigem precisão e controle.
                         </p>
-                    </div>
-                    <div class="skill-card glass reveal">
-                        <i class="fa-solid fa-code"></i>
-                        <h3>Introdução a Programação - 2025</h3>
-                        <p>
-                            Fundamentos de lógica de programação, algoritmos e
-                            estruturas de dados.
-                        </p>
-                    </div>
-                    <div class="skill-card glass reveal">
-                        <i class="fa-brands fa-git-alt"></i>
-                        <h3>Git & GitHub do Básico ao Avançado - 2026</h3>
-                        <p>Controle de versão e colaboração em projetos.</p>
-                    </div>
-                    <div class="skill-card glass reveal">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <h3>HTML5 & CSS3 Essenciais - 2026</h3>
-                        <p>
-                            Fundamentos de estruturação e estilização de páginas
-                            web, incluindo layouts responsivos e boas práticas
-                            de design.
-                        </p>
-                    </div>
-                    <div class="skill-card glass reveal">
-                        <i class="fa-brands fa-python"></i>
-                        <h3>
-                            Desenvolvedor Full Stack Python -
-                            <span>Em andamento</span>
-                        </h3>
-                        <p>
-                            Estudo de conceitos fundamentais e avançados de
-                            Python, incluindo desenvolvimento web, APIs e
-                            integração com bancos de dados.
-                        </p>
-                    </div>
-                    <div class="skill-card glass reveal">
-                        <i class="fa-brands fa-square-js"></i>
-                        <h3>
-                            JavaScript & TypeScript Essencial -
-                            <span>Em andamento</span>
-                        </h3>
-                        <p>
-                            Estudo de conceitos fundamentais e avançados de
-                            JavaScript e TypeScript, incluindo tipagem estática,
-                            funções, objetos e manipulação do DOM.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projetos" class="section">
-                <h2 class="section-title reveal">Projetos</h2>
-                <div class="projects-grid">
-                    <div class="project-card glass reveal">
-                        <div class="project-img">
-                            <img
-                                src="./img/disney-clone.png"
-                                alt="Clone Disney+"
-                            />
-                        </div>
-                        <div class="project-info">
-                            <div class="project-info-container">
-                                <h3>Clone Disney+</h3>
-                                <div class="links">
-                                    <a
-                                        href="https://github.com/Jvictor3141/clone_disney-plus"
-                                        class="project-link"
-                                        target="_blank"
-                                        ><i class="fa-solid fa-code"></i
-                                    ></a>
-                                    <a
-                                        href="https://clone-disney-plus-smoky-one.vercel.app/"
-                                        class="project-link"
-                                        target="_blank"
-                                        ><i class="fa-solid fa-globe"></i
-                                    ></a>
-                                </div>
-                            </div>
+                        <div>
                             <p>
-                                Projeto de clone da interface do Disney+,
-                                desenvolvido com HTML, CSS e JavaScript, com
-                                gulp para automação de tarefas e sass para
-                                estilização.
+                                Hoje direciono meus estudos ao desenvolvimento de software. Exploro JavaScript, TypeScript, React, Tailwind CSS, Java, Groovy e PostgreSQL em projetos que passam da interface à lógica de negócio e à integração com dados.
+                            </p>
+                            <p>
+                                Quero seguir evoluindo, aprender com outros profissionais e contribuir para soluções eficientes, funcionais e bem estruturadas — levando comigo a experiência que construí na indústria.
                             </p>
                         </div>
                     </div>
-                    <div class="project-card glass reveal">
-                        <div class="project-img">
-                            <img
-                                src="./img/cafeteria.png"
-                                alt="Cafeteria Jesinghaus"
-                            />
+                    <p class="about-note"><span>O QUE LEVO COMIGO</span> Precisão <i>·</i> Responsabilidade <i>·</i> Vontade de aprender</p>
+                </div>
+            </section>
+
+            <section class="formation section-shell" id="formacao" aria-labelledby="formation-title">
+                <div class="section-rail reveal"><span>02 / FORMAÇÃO</span><span class="rail-line"></span></div>
+                <div class="formation-content">
+                    <div class="section-heading reveal">
+                        <div>
+                            <p class="eyebrow">Aprendizado contínuo</p>
+                            <h2 id="formation-title">Cursos &<br /><em>certificações.</em></h2>
                         </div>
-                        <div class="project-info">
-                            <div class="project-info-container">
-                                <h3>Cafeteria Jesinghaus</h3>
-                                <div class="links">
-                                    <a
-                                        href="https://github.com/Jvictor3141/my_project_victor"
-                                        class="project-link"
-                                        target="_blank"
-                                        ><i class="fa-solid fa-code"></i
-                                    ></a>
-                                    <a
-                                        href="https://my-project-victor.vercel.app/"
-                                        class="project-link"
-                                        target="_blank"
-                                        ><i class="fa-solid fa-globe"></i
-                                    ></a>
-                                </div>
-                            </div>
-                            <p>
-                                Projeto pessoal de site para a Cafeteria
-                                Jesinghaus(fictício), desenvolvido com HTML, CSS
-                                e JavaScript, com foco em design responsivo e
-                                experiência do usuário.
-                            </p>
-                        </div>
+                        <p class="heading-aside">Conhecimento construído<br />um projeto de cada vez.</p>
                     </div>
-                    <div class="project-card glass reveal">
-                        <div class="project-img">
-                            <img src="./img/agenda.png" alt="LifeSync" />
+
+                    <div class="reveal">
+                        <ol class="learning-list">
+                            <li><span class="learning-year">2026</span><span class="learning-name">Banco de Dados</span><span class="learning-detail">PostgreSQL, modelagem de dados, consultas SQL e relacionamentos.</span><span class="learning-status">CONCLUÍDO</span></li>
+                            <li><span class="learning-year">2026</span><span class="learning-name">Groovy</span><span class="learning-detail">Sintaxe dinâmica, POO e integração com Java</span><span class="learning-status">CONCLUÍDO</span></li>
+                            <li><span class="learning-year">2026</span><span class="learning-name">Java</span><span class="learning-detail">POO, coleções e tratamento de exceções</span><span class="learning-status">CONCLUÍDO</span></li>
+                            <li><span class="learning-year">2026</span><span class="learning-name">TypeScript</span><span class="learning-detail">Tipagem estática, interfaces e generics</span><span class="learning-status">CONCLUÍDO</span></li>
+                            <li><span class="learning-year">2026</span><span class="learning-name">JavaScript</span><span class="learning-detail">ES6+, manipulação do DOM, eventos e lógica de programação</span><span class="learning-status">CONCLUÍDO</span></li>
+                            <li><span class="learning-year">2026</span><span class="learning-name">Git & GitHub do Básico ao Avançado</span><span class="learning-detail">Controle de versão e colaboração</span><span class="learning-status">CONCLUÍDO</span></li>
+                            <li><span class="learning-year">2026</span><span class="learning-name">HTML5 & CSS3 Essenciais</span><span class="learning-detail">Estrutura, estilo e responsividade</span><span class="learning-status">CONCLUÍDO</span></li>
+                            <li><span class="learning-year">2025</span><span class="learning-name">Introdução à Programação</span><span class="learning-detail">Lógica, algoritmos e estruturas de dados</span><span class="learning-status">CONCLUÍDO</span></li>
+                            <li><span class="learning-year">2016</span><span class="learning-name">Informática Básica e Avançada</span><span class="learning-detail">Ferramentas, sistemas e internet</span><span class="learning-status">CONCLUÍDO</span></li>
+                        </ol>
+                    </div>
+
+                    <div class="toolkit reveal">
+                        <span class="toolkit-label">EM CONTATO COM</span>
+                        <p>JavaScript <i>·</i> TypeScript <i>·</i> React <i>·</i> Tailwind CSS <i>·</i> Java <i>·</i> Groovy <i>·</i> PostgreSQL</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects section-shell" id="projetos" aria-labelledby="projects-title">
+                <div class="section-rail reveal"><span>03 / TRABALHOS</span><span class="rail-line"></span></div>
+                <div class="projects-content">
+                    <div class="section-heading projects-heading reveal">
+                        <div>
+                            <p class="eyebrow">Feitos para aprender fazendo</p>
+                            <h2 id="projects-title">Projetos<br /><em>selecionados.</em></h2>
                         </div>
-                        <div class="project-info">
-                            <div class="project-info-container">
+                        <p class="heading-aside">Interfaces, ideias e prática<br />transformadas em produto.</p>
+                    </div>
+
+                    <div>
+                        <article class="project-row reveal">
+                            <span class="project-number">01</span>
+                            <a class="project-visual" href="https://lifesync-project.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do LifeSync">
+                                <img src="./img/agenda.png" alt="Prévia da aplicação LifeSync" loading="lazy" />
+                                <span class="visual-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="project-copy">
+                                <p class="project-type">APLICAÇÃO WEB · REACT</p>
                                 <h3>LifeSync</h3>
-                                <div class="links">
-                                    <a
-                                        href="https://github.com/Jvictor3141/lifesync-project"
-                                        class="project-link"
-                                        target="_blank"
-                                        ><i class="fa-solid fa-code"></i
-                                    ></a>
-                                    <a
-                                        href="https://lifesync-project.vercel.app/"
-                                        class="project-link"
-                                        target="_blank"
-                                        ><i class="fa-solid fa-globe"></i
-                                    ></a>
-                                </div>
+                                <p>Agenda com controle financeiro básico, criada para praticar a construção de uma aplicação com React, Vite e Tailwind CSS. Usei IA como ferramenta auxiliar, compreendendo e adaptando o código ao longo do processo.</p>
+                                <div class="project-tools"><span>React</span><span>Vite</span><span>Tailwind CSS</span></div>
                             </div>
-                            <p>
-                                Aplicação web de agenda com controle financeiro
-                                básico, desenvolvida com React (Vite),
-                                TailwindCSS e JavaScript. Projeto utilizado como
-                                ambiente de aprendizado prático, com apoio de IA
-                                como ferramenta auxiliar, mantendo compreensão e
-                                adaptação do código.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="project-card glass reveal">
-                        <div class="project-img">
-                            <img
-                                src="./img/httyd-site.png"
-                                alt="HTTYD Fan Site"
-                            />
-                        </div>
-                        <div class="project-info">
-                            <div class="project-info-container">
+                            <div class="project-actions"><a href="https://github.com/Jvictor3141/lifesync-project" target="_blank" rel="noopener noreferrer">CÓDIGO <span aria-hidden="true">↗</span></a><a href="https://lifesync-project.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO <span aria-hidden="true">↗</span></a></div>
+                        </article>
+
+                        <article class="project-row reveal">
+                            <span class="project-number">02</span>
+                            <a class="project-visual" href="https://my-project-victor.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do site Cafeteria Jesinghaus">
+                                <img src="./img/cafeteria.png" alt="Prévia do site da Cafeteria Jesinghaus" loading="lazy" />
+                                <span class="visual-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="project-copy">
+                                <p class="project-type">SITE INSTITUCIONAL · FRONT-END</p>
+                                <h3>Cafeteria Jesinghaus</h3>
+                                <p>Site conceitual para uma cafeteria fictícia, com foco em identidade visual, navegação responsiva e uma experiência acolhedora.</p>
+                                <div class="project-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                            </div>
+                            <div class="project-actions"><a href="https://github.com/Jvictor3141/my_project_victor" target="_blank" rel="noopener noreferrer">CÓDIGO <span aria-hidden="true">↗</span></a><a href="https://my-project-victor.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO <span aria-hidden="true">↗</span></a></div>
+                        </article>
+
+                        <article class="project-row reveal">
+                            <span class="project-number">03</span>
+                            <a class="project-visual" href="https://clone-disney-plus-smoky-one.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do clone Disney+">
+                                <img src="./img/disney-clone.png" alt="Prévia do projeto Clone Disney+" loading="lazy" />
+                                <span class="visual-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="project-copy">
+                                <p class="project-type">ESTUDO DE INTERFACE · FRONT-END</p>
+                                <h3>Clone Disney+</h3>
+                                <p>Recriação de uma interface de streaming para praticar composição visual, estilos com Sass e automação de tarefas com Gulp.</p>
+                                <div class="project-tools"><span>HTML</span><span>Sass</span><span>JavaScript</span><span>Gulp</span></div>
+                            </div>
+                            <div class="project-actions"><a href="https://github.com/Jvictor3141/clone_disney-plus" target="_blank" rel="noopener noreferrer">CÓDIGO <span aria-hidden="true">↗</span></a><a href="https://clone-disney-plus-smoky-one.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO <span aria-hidden="true">↗</span></a></div>
+                        </article>
+
+                        <article class="project-row reveal">
+                            <span class="project-number">04</span>
+                            <a class="project-visual" href="https://httyd-site.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do HTTYD Fan Site">
+                                <img src="./img/httyd-site.png" alt="Prévia do HTTYD Fan Site" loading="lazy" />
+                                <span class="visual-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="project-copy">
+                                <p class="project-type">LANDING PAGE · FRONT-END</p>
                                 <h3>HTTYD Fan Site</h3>
-                                <div class="links">
-                                    <a
-                                        href="https://github.com/Jvictor3141/httyd-site"
-                                        class="project-link"
-                                        target="_blank"
-                                        ><i class="fa-solid fa-code"></i
-                                    ></a>
-                                    <a
-                                        href="https://httyd-site.vercel.app/"
-                                        class="project-link"
-                                        target="_blank"
-                                        ><i class="fa-solid fa-globe"></i
-                                    ></a>
-                                </div>
+                                <p>Landing page inspirada no universo de Como Treinar o Seu Dragão, com atenção ao ritmo visual, responsividade e experiência de navegação.</p>
+                                <div class="project-tools"><span>HTML</span><span>Sass</span><span>JavaScript</span><span>Gulp</span></div>
                             </div>
-                            <p>
-                                Landing page inspirada no universo de Como
-                                Treinar o Seu Dragão, desenvolvida com HTML,
-                                SASS e JavaScript, usando Gulp para automação de
-                                tarefas, com foco em design responsivo e
-                                experiência do usuário.
-                            </p>
-                        </div>
+                            <div class="project-actions"><a href="https://github.com/Jvictor3141/httyd-site" target="_blank" rel="noopener noreferrer">CÓDIGO <span aria-hidden="true">↗</span></a><a href="https://httyd-site.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO <span aria-hidden="true">↗</span></a></div>
+                        </article>
+                        <article class="project-row reveal">
+                            <span class="project-number">05</span>
+                            <a class="project-visual" href="https://eventspace-landing-omega.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do Home Events site">
+                                <img src="./img/home_events.png" alt="Prévia do Home Events" loading="lazy" />
+                                <span class="visual-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="project-copy">
+                                <p class="project-type">LANDING PAGE · FRONT-END</p>
+                                <h3>Home Events</h3>
+                                <p>Landing page simples para promoção de um local de eventos, com um design elegante e responsivo, junto de uma experiência de navegação confortável.</p>
+                                <div class="project-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div>
+                            </div>
+                            <div class="project-actions"><a href="https://github.com/Jvictor3141/event_space-landing/" target="_blank" rel="noopener noreferrer">CÓDIGO <span aria-hidden="true">↗</span></a><a href="https://eventspace-landing-omega.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO <span aria-hidden="true">↗</span></a></div>
+                        </article>
+                        <article class="project-row reveal">
+                            <span class="project-number">06</span>
+                            <a class="project-visual" href="https://github.com/Jvictor3141/Linketinder-Project/" target="_blank" rel="noopener noreferrer" aria-label="Abrir código do Linketinder">
+                                <img src="./img/linketinder.png" alt="Prévia do Linketinder" loading="lazy" />
+                                <span class="visual-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="project-copy">
+                                <p class="project-type">PROJETO DE SOFTWARE · FULL STACK</p>
+                                <h3>Linketinder Web/Terminal</h3>
+                                <p>Sistema de recrutamento fictício com duas implementações: uma aplicação web em TypeScript que usa LocalStorage para persistência e uma aplicação de terminal em Groovy que usa PostgreSQL para persistência.</p>
+                                <div class="project-tools"><span>HTML</span><span>CSS</span><span>TypeScript</span><span>LocalStorage</span><span>Gradle</span><span>Groovy</span><span>PostgreSQL</span></div>
+                            </div>
+                            <div class="project-actions"><a href="https://github.com/Jvictor3141/Linketinder-Project/" target="_blank" rel="noopener noreferrer">CÓDIGO <span aria-hidden="true">↗</span></a></div>
+                        </article>
+                        <article class="project-row reveal">
+                            <span class="project-number">07</span>
+                            <a class="project-visual" href="https://github.com/Jvictor3141/TODO-List/" target="_blank" rel="noopener noreferrer" aria-label="Abrir código do TODO List">
+                                <img src="./img/todo-list.png" alt="Prévia do TODO List" loading="lazy" />
+                                <span class="visual-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="project-copy">
+                                <p class="project-type">PROJETO DE SOFTWARE · BACK-END</p>
+                                <h3>TODO-List terminal</h3>
+                                <p>Lista de a fazeres feita no terminal, com listagem por prioridade e categorização das tarefas, também conta com uma separação por status.</p>
+                                <div class="project-tools"><span>Java</span><span>Gradle</span></div>
+                            </div>
+                            <div class="project-actions"><a href="https://github.com/Jvictor3141/TODO-List/" target="_blank" rel="noopener noreferrer">CÓDIGO <span aria-hidden="true">↗</span></a></div>
+                        </article>
+                        <article class="project-row reveal">
+                            <span class="project-number">08</span>
+                            <a class="project-visual" href="https://todo-list-ecru-delta-41.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demonstração do TODO List">
+                                <img src="./img/todo-list-js.png" alt="Prévia do TODO List" loading="lazy" />
+                                <span class="visual-arrow" aria-hidden="true">↗</span>
+                            </a>
+                            <div class="project-copy">
+                                <p class="project-type">APLICAÇÃO WEB · FRONT-END</p>
+                                <h3>TODO-List Web</h3>
+                                <p>Gerenciador de a fazeres simples, separado por status estilo Kanban, com persistência no LocalStorage.</p>
+                                <div class="project-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>LocalStorage</span></div>
+                            </div>
+                            <div class="project-actions"><a href="https://github.com/Jvictor3141/TODO-List-JS/" target="_blank" rel="noopener noreferrer">CÓDIGO <span aria-hidden="true">↗</span></a><a href="https://todo-list-ecru-delta-41.vercel.app/" target="_blank" rel="noopener noreferrer">DEMO <span aria-hidden="true">↗</span></a></div>
+                        </article>
                     </div>
                 </div>
             </section>
 
-            <section id="contato" class="section">
-                <h2 class="section-title reveal">Contato</h2>
-                <div class="contact-container glass reveal">
-                    <form
-                        id="contact-form"
-                        novalidate
-                    >
-                        <div class="form-group filed">
-                            <input
-                                type="text"
-                                placeholder="Seu Nome"
-                                name="name"
-                                required
-                            />
-                            <small class="error" data-error-for="name"></small>
+            <section class="contact" id="contato" aria-labelledby="contact-title">
+                <div class="contact-side reveal"><span>04 / CONTATO</span><span class="contact-side-mark" aria-hidden="true">↘</span></div>
+                <div class="contact-main reveal">
+                    <div class="contact-intro">
+                        <p class="eyebrow">Toda boa construção começa com uma conversa</p>
+                        <h2 id="contact-title">Tem um projeto<br />em mente<span class="contact-question">?</span></h2>
+                        <p>Estou aberto a trocar ideias, aprender e colaborar. Me conta o que você está construindo.</p>
+                        <div class="social-links" aria-label="Redes sociais">
+                            <a href="https://github.com/Jvictor3141" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                            <a href="https://www.linkedin.com/in/jvictor3141/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                            <a href="https://www.instagram.com/joao.victor2602/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
                         </div>
-                        <div class="form-group filed">
-                            <input
-                                type="email"
-                                placeholder="Seu E-mail"
-                                name="email"
-                                required
-                            />
-                            <small class="error" data-error-for="email"></small>
-                        </div>
-                        <div class="form-group filed">
-                            <textarea
-                                placeholder="Sua Mensagem"
-                                name="message"
-                                rows="5"
-                                required
-                            ></textarea>
-                            <small class="error" data-error-for="message"></small>
-                        </div>
-                        <div class="form-group honeypot"> <!-- campo honeypot para evitar spam -->
-                            <input
-                                type="text"
-                                name="_gotcha"
-                                tabindex="-1"
-                                autocomplete="off"
-                                aria-hidden="true"
-                            />
-                        </div>
-                        <button id="sendBtn" type="submit" class="btn btn-primary">
-                            <span class="btn-text">Enviar</span>
-                            <span class="btn-loading" aria-hidden="true">Enviando...</span>
-                        </button>
-                        <p id="formStatus" role="status" aria-live="polite"></p>
-                    </form>
-                    <div class="social-links">
-                        <a
-                            href="https://github.com/Jvictor3141"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            ><i class="fab fa-github"></i
-                        ></a>
-                        <a
-                            href="https://www.linkedin.com/in/jvictor3141/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            ><i class="fab fa-linkedin"></i
-                        ></a>
-                        <a
-                            href="https://www.instagram.com/joao.victor2602/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            ><i class="fab fa-instagram"></i
-                        ></a>
                     </div>
+                    <form id="contact-form" novalidate>
+                        <div class="form-row">
+                            <label for="name">Seu nome</label>
+                            <input id="name" type="text" name="name" placeholder="Como posso te chamar?" autocomplete="name" required aria-describedby="name-error" />
+                            <small class="error" id="name-error" data-error-for="name"></small>
+                        </div>
+                        <div class="form-row">
+                            <label for="email">Seu e-mail</label>
+                            <input id="email" type="email" name="email" placeholder="voce@exemplo.com" autocomplete="email" required aria-describedby="email-error" />
+                            <small class="error" id="email-error" data-error-for="email"></small>
+                        </div>
+                        <div class="form-row">
+                            <label for="message">Sua mensagem</label>
+                            <textarea id="message" name="message" placeholder="Um pouco sobre o que você tem em mente..." rows="3" required aria-describedby="message-error"></textarea>
+                            <small class="error" id="message-error" data-error-for="message"></small>
+                        </div>
+                        <div class="honeypot" aria-hidden="true">
+                            <label for="gotcha">Não preencha este campo</label>
+                            <input id="gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+                        </div>
+                        <div class="form-submit">
+                            <button id="sendBtn" type="submit"><span class="btn-text">Enviar mensagem</span><span class="btn-loading" aria-hidden="true">Enviando…</span><span aria-hidden="true">↗</span></button>
+                            <p id="formStatus" role="status" aria-live="polite"></p>
+                        </div>
+                    </form>
                 </div>
             </section>
         </main>
 
-        <footer class="glass">
-            <p>&copy; 2026 João Victor. Todos os direitos reservados.</p>
+        <footer class="site-footer">
+            <a class="footer-mark" href="#inicio">JV<span>.</span></a>
+            <p>Desenhado e desenvolvido por João Victor.</p>
+            <a class="back-top" href="#inicio">VOLTAR AO TOPO <span aria-hidden="true">↑</span></a>
+            <small>© 2026</small>
         </footer>
 
         <script src="script.js" defer></script>
